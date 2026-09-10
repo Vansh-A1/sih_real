@@ -1,0 +1,7 @@
+# Inspected environment; select a suitable official PyTorch wheel before installing.
+torch==2.10.0
+numpy==2.4.2
+rasterio==1.4.4
+affine==3.0.1
+matplotlib==3.11.1
+pytest==9.1.1

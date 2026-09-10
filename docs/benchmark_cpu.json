@@ -1,0 +1,54 @@
+{
+  "mode": "untrained analytical forward only; no optimizer",
+  "input_shape": [
+    1,
+    4,
+    128,
+    128
+  ],
+  "dtype": "float32",
+  "device": "cpu",
+  "repetitions": 5,
+  "latency_seconds_median": 0.2767454179993365,
+  "latency_seconds_min": 0.2760727230051998,
+  "physical_batch": 1,
+  "configured_accumulation": 4,
+  "configured_effective_batch": 4,
+  "training_latency": null,
+  "parameters": 654868,
+  "parameters_by_module": {
+    "stem": 2544,
+    "spectral": 2240,
+    "naf": 184704,
+    "swin": 137488,
+    "degradation": 64416,
+    "films": 49536,
+    "decoder": 213940,
+    "sensor": 0,
+    "corrector": 0
+  },
+  "cuda_peak_allocated_bytes": null,
+  "process_peak_rss_kib": 828220,
+  "environment": {
+    "python": "3.13.11",
+    "platform": "Linux-6.11.0-1020-oem-x86_64-with-glibc2.39",
+    "cpu_count": 20,
+    "packages": {
+      "torch": "2.10.0",
+      "numpy": "2.4.2",
+      "rasterio": "1.4.4",
+      "matplotlib": "3.11.1",
+      "pytest": "9.1.1",
+      "affine": "3.0.1"
+    },
+    "torch_cuda_build": "12.8",
+    "cuda_available": true,
+    "gpu": [
+      {
+        "name": "NVIDIA RTX 2000 Ada Generation",
+        "total_memory": 16848191488
+      }
+    ],
+    "gpu_status": "NVIDIA RTX 2000 Ada Generation, 550.120, 5847 MiB, 16380 MiB, 99 %"
+  }
+}

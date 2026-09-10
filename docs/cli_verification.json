@@ -1,0 +1,65 @@
+{
+  "training_executed": false,
+  "temporary_outputs_removed": true,
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/s2sr",
+        "check-config",
+        "--config",
+        "configs/v1.json"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "valid": true
+      }
+    },
+    {
+      "command": [
+        ".venv/bin/s2sr",
+        "fixtures",
+        "--config",
+        "configs/v1.json",
+        "--output",
+        "/tmp/s2sr-cli-verification-ecj3nk24/data",
+        "--count",
+        "8",
+        "--size",
+        "8"
+      ],
+      "exit_code": 0,
+      "summary": {}
+    },
+    {
+      "command": [
+        ".venv/bin/s2sr",
+        "validate-data",
+        "--manifest",
+        "/tmp/s2sr-cli-verification-ecj3nk24/data/manifest.json"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "samples": 8,
+        "roles": {
+          "train": 2,
+          "validation": 2,
+          "calibration": 2,
+          "test": 2
+        },
+        "synthetic": true
+      }
+    },
+    {
+      "command": [
+        ".venv/bin/s2sr",
+        "ablations",
+        "--config",
+        "configs/v1.json",
+        "--output",
+        "/tmp/s2sr-cli-verification-ecj3nk24/ablations"
+      ],
+      "exit_code": 0,
+      "summary": {}
+    }
+  ]
+}

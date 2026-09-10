@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "synthetic": false,
+  "description": "TEMPLATE ONLY: replace paths, metadata, grouping, dates and add separate validation/calibration/test scenes. These are not existing data paths.",
+  "samples": [
+    {
+      "id": "replace_with_sample_id",
+      "scene": "replace_with_scene_id",
+      "group": "replace_with_geographic_group",
+      "split": "train",
+      "harmonization": "Document HR-to-Sentinel spectral/radiometric harmonization here",
+      "registration": "Document alignment residuals and reference-confidence mask here",
+      "lr": {
+        "path": "REPLACE_WITH_REAL_LR.tif",
+        "bands": ["B2", "B3", "B4", "B8"],
+        "units": "dn",
+        "scale": [0.0001, 0.0001, 0.0001, 0.0001],
+        "offset": [-0.1, -0.1, -0.1, -0.1],
+        "decoding_note": "ILLUSTRATIVE VALUES ONLY. Read the actual product quantification and offset metadata before using.",
+        "crs": "EPSG:32643",
+        "transform": [10, 0, 500000, 0, -10, 3000000],
+        "shape": [128, 128],
+        "acquired": "2026-01-10",
+        "quality": "REPLACE_WITH_LR_QUALITY.npy",
+        "mask_dilation": 1
+      },
+      "hr": {
+        "path": "REPLACE_WITH_REAL_HR.tif",
+        "bands": ["B2", "B3", "B4", "B8"],
+        "units": "reflectance",
+        "crs": "EPSG:32643",
+        "transform": [2.5, 0, 500000, 0, -2.5, 3000000],
+        "shape": [512, 512],
+        "acquired": "2026-01-10",
+        "reference_confidence": "REPLACE_WITH_HR_REFERENCE_CONFIDENCE.npy"
+      },
+      "sensor_metadata": [0, 0, 0, 0, 0, 0, 0, 0],
+      "metadata_available": [0, 0, 0, 0, 0, 0, 0, 0],
+      "auxiliaries": []
+    }
+  ]
+}

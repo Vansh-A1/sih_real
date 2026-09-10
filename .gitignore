@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+artifacts/
+.coverage
+tmp/
+output/
+.env
+.env.*
+!.env.example
+*.pt
+*.pth
+*.ckpt
+.ipynb_checkpoints/

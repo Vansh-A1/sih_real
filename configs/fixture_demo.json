@@ -1,0 +1,120 @@
+{
+  "version": "v1",
+  "normalization": {
+    "mean": [
+      0.2,
+      0.25,
+      0.3,
+      0.45
+    ],
+    "std": [
+      0.2,
+      0.2,
+      0.2,
+      0.2
+    ],
+    "low": [
+      -0.2,
+      -0.2,
+      -0.2,
+      -0.2
+    ],
+    "high": [
+      1.5,
+      1.5,
+      1.5,
+      1.5
+    ],
+    "provenance": "unfitted_example_only"
+  },
+  "sensor": {
+    "kernel_size": 9,
+    "sigma": [
+      1.3,
+      1.35,
+      1.4,
+      1.5
+    ],
+    "kernels": null,
+    "phase": [
+      1.5,
+      1.5
+    ],
+    "boundary": "zero",
+    "assumption": "synthetic Gaussian effective PSF; not Sentinel calibration"
+  },
+  "correction": {
+    "mode": "fourier_landweber",
+    "iterations": 1,
+    "cutoff": [
+      0.125,
+      0.125,
+      0.125,
+      0.125
+    ],
+    "transition": 0.025,
+    "norm_iterations": 12,
+    "step_margin": 0.9,
+    "backtracks": 20,
+    "output_range": null
+  },
+  "architecture": {
+    "spectral_layers": 2,
+    "naf_blocks": 6,
+    "naf_expansion": 2,
+    "swin_blocks": 4,
+    "window": 8,
+    "mlp_ratio": 2,
+    "stem_blocks": 1,
+    "rich_heads": false,
+    "spectral_mode": "band_tokens",
+    "baseline": "adjoint",
+    "degradation": true,
+    "metadata_dim": 8,
+    "temporal": false,
+    "max_shift": 8,
+    "max_local_offset": 2.0,
+    "stability_tau": 0.08,
+    "uncertainty": false,
+    "ensemble_members": 1,
+    "flow": false,
+    "latent_channels": 8,
+    "sampling_steps": 8,
+    "mode": "analytical"
+  },
+  "train": {
+    "seed": 42,
+    "device": "cpu",
+    "threads": 4,
+    "max_steps": 200,
+    "batch_size": 1,
+    "accumulation": 1,
+    "lr": 0.0002,
+    "weight_decay": 0.0001,
+    "warmup_steps": 10,
+    "grad_clip": 1.0,
+    "ema_decay": 0.999,
+    "amp": "none",
+    "validate_every": 50,
+    "checkpoint_every": 50,
+    "panel_every": 50,
+    "stage": "analytical",
+    "fit_normalization": true,
+    "time_budget_seconds": 1200
+  },
+  "loss": {
+    "radiometric": 1.0,
+    "cycle": 0.5,
+    "sam": 0.1,
+    "high_frequency": 0.1,
+    "uncertainty": 0.01,
+    "temporal_gate": 0.1
+  },
+  "tiling": {
+    "core": 128,
+    "halo": 16,
+    "overlap": 16,
+    "cog": false
+  },
+  "metric_range": 1.0
+}

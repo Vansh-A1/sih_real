@@ -1,0 +1,64 @@
+{
+  "v1": {
+    "total": 654868,
+    "modules": {
+      "stem": 2544,
+      "spectral": 2240,
+      "naf": 184704,
+      "swin": 137488,
+      "degradation": 64416,
+      "films": 49536,
+      "decoder": 213940,
+      "sensor": 0,
+      "corrector": 0
+    }
+  },
+  "v2": {
+    "total": 698648,
+    "modules": {
+      "stem": 2544,
+      "spectral": 2240,
+      "naf": 184704,
+      "swin": 137488,
+      "degradation": 64416,
+      "films": 49536,
+      "decoder": 213940,
+      "sensor": 0,
+      "corrector": 0,
+      "temporal": 43780
+    }
+  },
+  "v3": {
+    "total": 710212,
+    "modules": {
+      "stem": 2544,
+      "spectral": 2240,
+      "naf": 184704,
+      "swin": 137488,
+      "degradation": 64416,
+      "films": 49536,
+      "decoder": 213940,
+      "sensor": 0,
+      "corrector": 0,
+      "temporal": 43780,
+      "uncertainty": 11564
+    }
+  },
+  "v4": {
+    "total": 956096,
+    "modules": {
+      "stem": 2544,
+      "spectral": 2240,
+      "naf": 184704,
+      "swin": 137488,
+      "degradation": 64416,
+      "films": 49536,
+      "decoder": 213940,
+      "sensor": 0,
+      "corrector": 0,
+      "temporal": 43780,
+      "uncertainty": 11564,
+      "flow": 245884
+    }
+  }
+}

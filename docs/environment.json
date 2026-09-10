@@ -1,0 +1,22 @@
+{
+  "python": "3.13.11",
+  "platform": "Linux-6.11.0-1020-oem-x86_64-with-glibc2.39",
+  "cpu_count": 20,
+  "packages": {
+    "torch": "2.10.0",
+    "numpy": "2.4.2",
+    "rasterio": "1.4.4",
+    "matplotlib": "3.11.1",
+    "pytest": "9.1.1",
+    "affine": "3.0.1"
+  },
+  "torch_cuda_build": "12.8",
+  "cuda_available": true,
+  "gpu": [
+    {
+      "name": "NVIDIA RTX 2000 Ada Generation",
+      "total_memory": 16848191488
+    }
+  ],
+  "gpu_status": "NVIDIA RTX 2000 Ada Generation, 550.120, 5849 MiB, 16380 MiB, 99 %"
+}
